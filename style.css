@@ -1,3 +1,16 @@
+:root {
+  --background-color: #383A59;
+  --calculator-color: #282A36;
+  --buttons-color: #414760;
+  --display-color: #696f8a;
+
+  --purple: #B28BEC;
+  --pink: #E573C5;
+  --blue: #86E0F4;
+  --green: #76D16E;
+  --yellow: #FBF280;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -8,6 +21,7 @@
 body {
   padding: 0;
   margin: 0;
+  background: var(--background-color);
 }
 
 .container {
@@ -26,12 +40,28 @@ body {
   gap: 12px;
   padding: 25px;
   border-radius: 20px;
+  background: var(--calculator-color);
 }
 
 .calculator > button {
   cursor: pointer;
   font-size: 2rem;
   border-radius: 15px;
+  background: var(--buttons-color);
+  color: var(--blue);
+}
+
+.calculator  > button[data-operation] {
+  color: var(--pink);
+}
+
+.calculator > button[data-equals]{
+  color: var(--purple);
+}
+
+.calculator > button[data-clear],
+button[data-delete] {
+  color: var(--green);
 }
 
 .span-two {
@@ -50,4 +80,6 @@ body {
   border-radius: 5px;
   margin-bottom: 19px;
   min-height: 100px;
+  background: var(--display-color);
+  color: var(--yellow);
 }
