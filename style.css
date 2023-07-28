@@ -114,3 +114,23 @@ button[data-delete] {
   box-shadow:  13px 13px 29px #14141a,
               -13px -13px 29px #2e303e;
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p, span {
+  font-size: 1.7rem;
+  color: var(--pink);
+}
+
+footer p > span:hover {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, var(--yellow), var(--pink)) 1;
+  transition: all ease 0.1s;
+  cursor: pointer;
+}
