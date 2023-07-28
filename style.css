@@ -1,14 +1,15 @@
 :root {
   --background-color: #383A59;
   --calculator-color: #282A36;
-  --buttons-color: #414760;
-  --display-color: #696f8a;
+  --buttons-display-color: #414760;
+  --operators-color: #353a4e;
 
   --purple: #B28BEC;
   --pink: #E573C5;
   --blue: #86E0F4;
   --green: #76D16E;
   --yellow: #FBF280;
+  --white: #FFF;
 }
 
 *, *::before, *::after {
@@ -42,22 +43,29 @@ body {
   padding: 25px;
   border-radius: 20px;
   background: var(--calculator-color);
+  box-shadow: 28px 28px 56px #1e2029,
+             -28px -28px 56px #323443;
 }
 
 .calculator > button {
   cursor: pointer;
   font-size: 2rem;
   border-radius: 15px;
-  background: var(--buttons-color);
+  background: var(--buttons-display-color);
   color: var(--blue);
+  box-shadow: 8px 8px 16px #1b1c26,
+             -8px -8px 16px #21222e;
 }
 
 .calculator  > button[data-operation] {
   color: var(--pink);
+  background: var(--operators-color);
 }
 
 .calculator > button[data-equals]{
-  color: var(--purple);
+  color: var(--yellow);
+  background: var(--purple);
+  font-size: 2.5rem;
 }
 
 .calculator > button[data-clear],
@@ -74,13 +82,15 @@ button[data-delete] {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   word-wrap: break-word;
   word-break: break-all;
   padding-inline: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 19px;
-  min-height: 100px;
-  background: var(--display-color);
-  color: var(--yellow);
+  min-height: 120px;
+  background: var(--buttons-display-color);
+  color: var(--white);
+  box-shadow:  13px 13px 29px #14141a,
+              -13px -13px 29px #2e303e;
 }
