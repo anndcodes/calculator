@@ -3,8 +3,11 @@
   --calculator-color: #282A36;
   --buttons-display-color: #414760;
   --operators-color: #353a4e;
+  --dark-operators: #262a3a;
+  --dark-nums: #34394e;
 
   --purple: #B28BEC;
+  --dark-purple: #8b64c5;
   --pink: #E573C5;
   --blue: #86E0F4;
   --green: #76D16E;
@@ -55,6 +58,11 @@ body {
   color: var(--blue);
   box-shadow: 8px 8px 16px #1b1c26,
              -8px -8px 16px #21222e;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--dark-nums);
 }
 
 .calculator  > button[data-operation] {
@@ -62,10 +70,18 @@ body {
   background: var(--operators-color);
 }
 
+button[data-operation]:hover {
+  background: var(--dark-operators);
+}
+
 .calculator > button[data-equals]{
   color: var(--yellow);
   background: var(--purple);
   font-size: 2.5rem;
+}
+
+button[data-equals]:hover {
+  background: var(--dark-purple);
 }
 
 .calculator > button[data-clear],
