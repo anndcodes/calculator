@@ -97,7 +97,7 @@ button[data-delete] {
   grid-column: span 2;
 }
 
-.calculator_display {
+.display {
   grid-column: 1 / -1;
   display: flex;
   align-items: center;
@@ -110,7 +110,7 @@ button[data-delete] {
   margin-bottom: 19px;
   min-height: 120px;
   background: var(--buttons-display-color);
-  color: var(--white);
+  color: var(--pink);
   box-shadow:  13px 13px 29px #14141a,
               -13px -13px 29px #2e303e;
 }
