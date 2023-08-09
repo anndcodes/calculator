@@ -13,3 +13,26 @@ let secNum = "";
 let operator = "";
 let currentNum = "0";
 let result = "";
+
+// function to make operations
+function operate(num1, op, num2) {
+  console.log(`the operation is ${num1} ${op} ${num2}`);
+  switch(op) {
+    case "+":
+      console.log(`the result is ${num1 + num2}`);
+      return num1 + num2;
+      break;
+    case "-":
+      console.log(`the result is ${num1 - num2}`);
+      return num1 - num2;
+      break;
+    case "×":
+      console.log(`the result is ${num1 * num2}`);
+      return num1 * num2;
+      break;
+    case "÷":
+      console.log(`the result is ${num1 / num2}`);
+      return num1 / num2;
+      break;
+  }
+}
