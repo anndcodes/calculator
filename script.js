@@ -14,6 +14,16 @@ let operator = "";
 let currentNum = "0";
 let result = "";
 
+
+// event to populate numbers on display and get the current number
+numberButtons.forEach(number => {
+  number.addEventListener('click', function() {
+    currentNum = parseFloat(currentNum + this.value);
+    display.textContent = currentNum;
+  })
+})
+
+
 // function to make operations
 function operate(num1, op, num2) {
   console.log(`the operation is ${num1} ${op} ${num2}`);
