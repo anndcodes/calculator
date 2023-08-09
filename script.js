@@ -32,6 +32,18 @@ clearButton.addEventListener('click', function(){
   result = "";
 })
 
+// event to delete last number
+deleteButton.addEventListener('click', function() {
+  if(result) {
+    currentNum = "0";
+    firstNum = "";
+    display.textContent = currentNum;
+  } else {
+    currentNum = Number(currentNum.toString().slice(0, -1));
+    display.textContent = currentNum;
+  }
+})
+
 // event to populate numbers on display and get the current number
 numberButtons.forEach(number => {
   number.addEventListener('click', function() {
