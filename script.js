@@ -24,6 +24,13 @@ numberButtons.forEach(number => {
 })
 
 
+// event to to make operation with decimal
+decimalButton.addEventListener('click', function(){
+  currentNum.toString().includes(".") ? currentNum : currentNum += ".";
+  display.textContent = currentNum;
+})
+
+
 // event to save operator 
 operationButtons.forEach(op => {
   op.addEventListener('click', function() {
