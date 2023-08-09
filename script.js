@@ -24,6 +24,28 @@ numberButtons.forEach(number => {
 })
 
 
+// event to save operator 
+operationButtons.forEach(op => {
+  op.addEventListener('click', function() {
+    if(firstNum && op && currentNum) {
+      secNum = currentNum;
+      result = parseFloat(operate(firstNum, operator, secNum).toFixed(1));
+      display.textContent = result;
+      firstNum = result;
+      currentNum = "0";
+      operator = this.value;
+    } else if(op !== "" && currentNum !== "" && firstNum === "") {
+      operator = this.value;
+      firstNum = currentNum;
+      currentNum = "0";
+     } else if(firstNum && op) {
+      operator = this.value;
+      secNum = currentNum;
+    } 
+  })
+})
+
+
 // function to make operations
 function operate(num1, op, num2) {
   console.log(`the operation is ${num1} ${op} ${num2}`);
