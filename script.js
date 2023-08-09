@@ -14,6 +14,23 @@ let operator = "";
 let currentNum = "0";
 let result = "";
 
+// variables to make cursor animation on clear
+let blink = document.createElement("div");
+blink.className = "blink";
+blink.textContent = "|";
+
+// event to clear the display
+clearButton.addEventListener('click', function(){
+  console.clear();
+  display.textContent = "";
+  display.appendChild(blink);
+
+  firstNum = "";
+  secNum = "";
+  currentNum = "0";
+  operator = "";
+  result = "";
+})
 
 // event to populate numbers on display and get the current number
 numberButtons.forEach(number => {
