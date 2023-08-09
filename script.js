@@ -46,6 +46,23 @@ operationButtons.forEach(op => {
 })
 
 
+// event to make operations when pressing "=" key
+equalsButton.addEventListener('click', function() {
+  if(operator === "") {
+    currentNum = 0;
+  } else if(operator && currentNum === "0") {
+    currentNum = 0;
+  } else {
+    secNum = currentNum;
+    result = parseFloat((operate(firstNum, operator, secNum)).toFixed(1));
+    display.textContent = result;
+    console.log(`this is the result ${result}`);
+    firstNum = result;
+    secNum = "";
+    currentNum = 0;
+  }
+})
+
 // function to make operations
 function operate(num1, op, num2) {
   console.log(`the operation is ${num1} ${op} ${num2}`);
