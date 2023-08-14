@@ -121,3 +121,19 @@ function operate(num1, op, num2) {
       break;
   }
 }
+
+// keyboard support 
+document.addEventListener('keydown', e => {
+  let buttons = document.querySelectorAll('button');
+  buttons.forEach(button => {
+    if((e.key === button.innerText)
+       || ((e.key === "Enter") && (button.innerText === "="))
+       || ((e.key === "Backspace") && (button.innerText === "DEL"))
+       || ((e.key === "Escape") && (button.innerText === "AC"))
+       || ((e.key === "*") && (button.innerText === "×"))
+       || ((e.key === "/") && (button.innerText === "÷"))) {
+          button.click();
+          e.preventDefault();
+    }
+  })
+})
